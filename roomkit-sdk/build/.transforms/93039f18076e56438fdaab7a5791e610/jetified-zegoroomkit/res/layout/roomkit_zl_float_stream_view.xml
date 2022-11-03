@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roomkit_stream_view_bg"
+    android:minWidth="220dp"
+    android:minHeight="151dp"
+    android:padding="0.5dp">
+
+    <RelativeLayout
+        android:id="@+id/base_video_layout_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/roomkit_color_gray_level3">
+
+        <TextureView
+            android:id="@+id/base_video_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--  右上角X  这个模式下隐藏，只是因为继承ZLMainVideoView,所以必须有这个view-->
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/base_video_righttop_iv"
+                android:layout_width="18dp"
+                android:layout_height="14dp"
+                android:layout_gravity="end"
+                android:layout_margin="4dp"
+                android:background="@drawable/roomkit_view_mask_text_bg"
+                android:scaleType="center"
+                android:src="@drawable/roomkit_videowindow_more2" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/weak_network_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/roomkit_stream_weak_network" />
+        </FrameLayout>
+        <im.zego.roomkit.videostream.videoview.NameMicView
+            android:id="@+id/video_view_name_mic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/host_offline_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:background="@drawable/roomkit_stream_view_bg">
+        <ImageView
+            android:id="@+id/host_status_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/roomkit_video_teacher_default2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/roomkit_host_status_tip_text"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+        <TextView
+            android:id="@+id/roomkit_host_status_tip_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/roomkit_color_gray_level17"
+            android:textSize="11dp"
+            app:layout_constraintTop_toBottomOf="@+id/host_status_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>
+

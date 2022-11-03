@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#cc000000"
+    android:layout_height="match_parent">
+
+    <!--页码/翻页器-->
+    <FrameLayout
+        android:id="@+id/page_indicator_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/pure_page_index"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/roomkit_page_index_layout_height"
+            android:background="@drawable/roomkit_page_index_bg"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingRight="4dp"
+            android:text="20/100"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="@dimen/roomkit_page_index_text_size"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/page_index_with_file"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/roomkit_page_index_layout_height"
+            android:background="@drawable/roomkit_page_index_bg"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            tools:visibility="visible"
+            >
+
+            <ImageView
+                android:id="@+id/page_index_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="7dp"
+                android:scaleType="center"
+                android:src="@drawable/roomkit_toolbar_icon_pagenumber_left_normal" />
+
+            <TextView
+                android:id="@+id/within_page_index"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="1/5"
+                android:textColor="@color/roomkit_color_gray_level26"
+                android:textSize="@dimen/roomkit_page_index_text_size" />
+
+            <ImageView
+                android:id="@+id/page_index_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="7dp"
+                android:scaleType="center"
+                android:src="@drawable/roomkit_toolbar_icon_pagenumber_right_normal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/page_excel"
+            android:layout_width="87dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/roomkit_page_index_bg"
+            android:clickable="true"
+            android:drawableEnd="@drawable/roomkit_share_excel_list2"
+            android:ellipsize="middle"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textSize="@dimen/roomkit_textSize_22"
+            android:textColor="@color/roomkit_color_gray_level26" />
+
+    </FrameLayout>
+
+    <!--讨论、成员、共享、摄像头、麦克风、设置-->
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/meeting_mode_switch"
+        android:layout_width="80dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="@dimen/roomkit_setting_icon_margin_right"
+        android:background="@drawable/roomkit_toolbar_switch_bg"
+        android:drawableLeft="@drawable/roomkit_meeting_mode_switch"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="@string/roomkit_go_to_share_mode"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="11dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/roomkit_prompt_bottom">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="@dimen/roomkit_dialog_progress_bar_width"
+        android:layout_height="@dimen/roomkit_dialog_progress_bar_width"
+        android:layout_marginRight="@dimen/roomkit_dialog_progress_bar_margin_right"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/roomkit_send_msg_progress_bar"/>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:gravity="center"
+        android:textSize="@dimen/roomkit_dialog_text_size" />
+
+</LinearLayout>

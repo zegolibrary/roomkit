@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@color/roomkit_color_gray_level4"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp">
+
+    <TextView
+        android:id="@+id/relatedList"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
+        android:drawableLeft="@drawable/roomkit_file_related_cloud_disk"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:text="@string/roomkit_file_room_disk"
+        android:textColor="@color/roomkit_file_item_state_text_color"
+        android:textSize="@dimen/roomkit_room_textSize_22" />
+
+    <TextView
+        android:id="@+id/my_disk"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
+        android:drawableLeft="@drawable/roomkit_file_my_cloud_disk"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:text="@string/roomkit_file_my_cloud_disk"
+        android:textColor="@color/roomkit_file_item_state_text_color"
+        android:textSize="@dimen/roomkit_room_textSize_22" />
+
+    <TextView
+        android:id="@+id/enterprise_disk"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
+        android:drawableLeft="@drawable/roomkit_file_enterprise_cloud_disk"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:text="@string/roomkit_file_enterprise_cloud_disk"
+        android:textColor="@color/roomkit_file_item_state_text_color"
+        android:textSize="@dimen/roomkit_room_textSize_22" />
+</LinearLayout>

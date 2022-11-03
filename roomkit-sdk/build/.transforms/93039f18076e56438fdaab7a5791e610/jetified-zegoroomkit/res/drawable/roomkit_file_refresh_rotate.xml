@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+
+        <shape android:shape="oval">
+            <corners android:radius="13.5dp" />
+            <solid android:color="@color/roomkit_color_main_level2" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="6.5dp"
+        android:drawable="@drawable/roomkit_refresh2"
+        android:left="6.5dp"
+        android:right="6.5dp"
+        android:top="6.5dp">
+
+    </item>
+</layer-list>

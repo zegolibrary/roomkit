@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/roomkit_check_box_dialog_width"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roomkit_reload_dialog_bg"
+    android:paddingBottom="24dp">
+
+
+    <!--1、带标题
+        2、内容
+        3、checkbox
+        4、close
+        5、一个按钮
+        6、两个按钮
+    -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/roomkit_tip"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="@dimen/roomkit_room_textSize_28"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/roomkit_filelist_icon_close_normal"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:lineSpacingExtra="7dp"
+        android:minWidth="190dp"
+        android:maxWidth="250dp"
+        android:gravity="center"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="@dimen/roomkit_textSize_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/left_btn"
+        android:layout_width="60dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/roomkit_cancel"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="@dimen/roomkit_room_textSize_22"
+        android:maxLines="1"
+        android:ellipsize="middle"
+        android:gravity="center"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/right_btn"
+        app:layout_constraintTop_toBottomOf="@id/content" />
+
+    <TextView
+        android:id="@+id/right_btn"
+        android:layout_width="60dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="@string/roomkit_confirm"
+        android:maxLines="1"
+        android:ellipsize="middle"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="@dimen/roomkit_room_textSize_22"
+        android:visibility="visible"
+        app:layout_constraintLeft_toRightOf="@id/left_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

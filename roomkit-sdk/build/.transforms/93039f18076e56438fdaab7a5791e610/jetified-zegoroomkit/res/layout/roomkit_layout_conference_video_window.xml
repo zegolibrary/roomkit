@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/roomkit_color_extend_level1">
+
+    <TextView
+        android:id="@+id/empty_bg_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="7dp"
+        android:lineSpacingMultiplier="1.0"
+        android:text="@string/roomkit_video_empty_tips"
+        android:textColor="@color/roomkit_color_gray_level17" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video_window_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:id="@+id/full_screen_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</merge>

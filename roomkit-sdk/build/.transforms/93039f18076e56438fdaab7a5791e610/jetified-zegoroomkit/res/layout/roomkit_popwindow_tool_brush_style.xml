@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="152dp"
+        android:layout_height="195dp"
+        android:background="@drawable/roomkit_white_board_tool_view_unselect_bg"
+        android:elevation="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ll_brush_style"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <ImageView
+                android:id="@+id/item_style_brush_free"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/roomkit_tool_brush_style_free" />
+
+            <ImageView
+                android:id="@+id/item_style_brush_line"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/roomkit_tool_brush_style_line" />
+
+            <ImageView
+                android:id="@+id/item_style_brush_rect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/roomkit_tool_brush_style_rect" />
+
+            <ImageView
+                android:id="@+id/item_style_brush_oval"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/roomkit_tool_brush_style_oval" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/style_lineWidth_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintTop_toBottomOf="@id/ll_brush_style"
+            tools:itemCount="1"
+            tools:listitem="@layout/roomkit_item_style_linewidth" />
+
+        <View
+            android:id="@+id/style_line"
+            android:layout_width="136dp"
+            android:layout_height="1px"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:background="@color/roomkit_color_gray_level13"
+            app:layout_constraintTop_toBottomOf="@id/style_lineWidth_recyclerview" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/style_color_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintTop_toBottomOf="@id/style_line"
+            tools:listitem="@layout/roomkit_item_style_color" />
+
+    </LinearLayout>
+</FrameLayout>

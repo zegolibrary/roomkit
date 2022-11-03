@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.MeetingWaitFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@color/roomkit_color_gray_level3">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/waiting_join_tv_center"
+            android:text="@string/roomkit_conference_waiting_view_desc"
+            android:gravity="center"
+            android:textColor="@color/roomkit_color_gray_level18"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/roomkit_conference_waiting_view_title"
+            android:gravity="center"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="22dp"
+            android:layout_marginBottom="11dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/waiting_join_tv_center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:id="@+id/waiting_join_quit_tv"
+            android:text="@string/roomkit_conference_leave"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="12dp"
+            android:layout_marginTop="29dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/waiting_join_tv_center"
+            android:background="@drawable/roomkit_drawable_oval_stroke_white"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

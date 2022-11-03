@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#e6000000">
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@drawable/roomkit_screen_share_title_bg"
+        android:gravity="center"
+        android:maxWidth="330dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_gravity="top|right"
+        android:scaleType="center"
+        android:src="@drawable/roomkit_filelist_icon_close_normal" />
+
+    <GridLayout
+        android:id="@+id/tools_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:columnCount="5"
+        >
+        <im.zego.roomkit.videotools.VideoToolsButton
+            android:id="@+id/foreground_full_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <im.zego.roomkit.videotools.VideoToolsButton
+            android:id="@+id/foreground_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <im.zego.roomkit.videotools.VideoToolsButton
+            android:id="@+id/foreground_micro_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <im.zego.roomkit.videotools.VideoToolsButton
+            android:id="@+id/foreground_speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <im.zego.roomkit.videotools.VideoToolsButton
+            android:id="@+id/foreground_authority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <im.zego.roomkit.videotools.VideoToolsButton
+            android:id="@+id/foreground_leave_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+    </GridLayout>
+
+
+</FrameLayout>

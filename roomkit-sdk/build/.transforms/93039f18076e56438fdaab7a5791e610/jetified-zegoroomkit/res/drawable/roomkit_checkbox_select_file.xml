@@ -1,0 +1,30 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中状态 一旦选中，就不可取消-->
+    <item android:state_checked="true">
+        <layer-list>
+            <item
+                android:width="13dp"
+                android:height="13dp">
+                <shape android:shape="oval">
+                    <padding android:bottom="@dimen/roomkit_dimen_1" android:left="@dimen/roomkit_dimen_1" android:right="@dimen/roomkit_dimen_1" android:top="@dimen/roomkit_dimen_1" />
+                    <size android:width="13dp" android:height="13dp" />
+                    <solid android:color="@color/roomkit_color_main_level2" />
+                    <stroke android:width="@dimen/roomkit_dimen_1" android:color="@color/roomkit_color_main_level2" />
+                </shape>
+            </item>
+            <item
+                android:width="6dp"
+                android:height="6dp"
+                android:drawable="@drawable/roomkit_option_check2" android:gravity="center"/>
+        </layer-list>
+    </item>
+
+    <!--默认状态-->
+    <item>
+        <shape android:shape="oval">
+            <size android:width="13dp" android:height="13dp" />
+            <solid android:color="@color/roomkit_color_gray_level4" />
+            <stroke android:width="@dimen/roomkit_dimen_1" android:color="@color/roomkit_color_gray_level20" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:duplicateParentState="true"
+    android:clipChildren="false">
+    <ImageView
+        android:id="@+id/iv_raise_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:src="@drawable/roomkit_selector_raise_hand_image"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        />
+</merge>

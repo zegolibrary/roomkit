@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/drawer_view_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="#80000000" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/roomkit_color_gray_level4">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/opened_view_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/edit_mode_bottom_layout"
+            app:layout_constraintTop_toBottomOf="@+id/divider_line" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/roomkit_color_gray_level4"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/opened_view_close"
+                android:layout_width="48dp"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:src="@drawable/roomkit_filelist_icon_close_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/roomkit_file_sharing"
+                android:textColor="@color/roomkit_color_gray_level26"
+                android:textSize="@dimen/roomkit_room_textSize_26"
+                app:layout_constraintBottom_toBottomOf="@id/opened_view_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/opened_view_close" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/edit_mode_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/roomkit_color_gray_level4"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/share_edit_cancel"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/roomkit_cancel"
+                android:textColor="@color/roomkit_color_gray_level26"
+                android:textSize="@dimen/roomkit_textSize_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/share_edit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="已选择1项"
+                android:textColor="@color/roomkit_color_gray_level26"
+                android:textSize="@dimen/roomkit_dp_textSize_26"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/share_edit_cancel" />
+
+            <TextView
+                android:id="@+id/share_edit_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/roomkit_horizontal_padding"
+                android:text="@string/roomkit_file_select_all"
+                android:textColor="@color/roomkit_color_gray_level26"
+                android:textSize="@dimen/roomkit_textSize_24"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/share_edit_cancel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/roomkit_color_gray_level10"
+            app:layout_constraintTop_toBottomOf="@id/title_layout" />
+
+        <ImageView
+            android:id="@+id/share_emptyview_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="109dp"
+            android:scaleType="center"
+            android:src="@drawable/roomkit_filelist_default2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/share_emptyview_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="@string/roomkit_file_opened_empty_text"
+            android:textColor="@color/roomkit_color_gray_level14"
+            android:textSize="@dimen/roomkit_room_textSize_22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/share_emptyview_image" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_share_emptyview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="share_emptyview_image,share_emptyview_text" />
+
+        <ProgressBar
+            android:id="@+id/loading_progress_bar"
+            android:layout_width="@dimen/roomkit_dialog_progress_bar_width"
+            android:layout_height="@dimen/roomkit_dialog_progress_bar_width"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/roomkit_progress_bar"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/opened_view_recycleview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/opened_view_recycleview" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/edit_mode_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#e6ffffff"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/edit_mode_bottom_stop"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/roomkit_sharing_unshare2"
+                android:drawablePadding="4dp"
+                android:enabled="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/roomkit_finish_share"
+                android:textColor="@color/roomkit_file_list_bottom_text_color"
+                android:textSize="@dimen/roomkit_dp_textSize_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

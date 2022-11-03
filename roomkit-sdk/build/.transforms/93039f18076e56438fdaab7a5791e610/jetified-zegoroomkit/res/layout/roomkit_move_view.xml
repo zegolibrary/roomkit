@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selected_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roomkit_movable_view_bg"
+    android:minWidth="220dp"
+    android:minHeight="151dp">
+
+    <im.zego.roomkit.videostream.videoview.SoundWaveView
+        android:id="@+id/wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingBottom="31dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="gone"
+        />
+<!--    <cn.talkline.sdk.wrapper.manager.stream.ZegoTextureView-->
+<!--        android:id="@+id/video_view_window"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+    <im.zego.roomkit.videostream.videoview.ZegoVideoView
+        android:id="@+id/video_view_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/view_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@color/roomkit_color_gray_level3"
+            android:scaleType="centerInside"
+            android:src="@drawable/roomkit_video_view_default_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/view_mask_text"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/roomkit_view_mask_text_bg"
+            android:gravity="center"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:text="@string/roomkit_media_pausing"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="9dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/view_mask_pending_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="middle"
+            android:maxWidth="330dp"
+            android:singleLine="true"
+            android:text="@string/roomkit_media_waiting_text"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="@dimen/roomkit_room_textSize_28"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/roomkit_player_bar_bg">
+
+    </FrameLayout>
+
+</FrameLayout>

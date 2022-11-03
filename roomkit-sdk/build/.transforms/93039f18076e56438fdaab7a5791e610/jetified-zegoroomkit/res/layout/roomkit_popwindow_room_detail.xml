@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="334dp"
+    android:layout_height="match_parent"
+    android:background="@color/roomkit_color_gray_level4">
+
+    <ImageView
+        android:id="@+id/iv_room_detail_close"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/roomkit_filelist_icon_close_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="@string/roomkit_room_info_title"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="@dimen/roomkit_room_textSize_26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_room_detail_share"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/roomkit_detial_share_ic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/roomkit_color_extend_level8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_room_detail_close" />
+
+    <TextView
+        android:id="@+id/tv_room_detail_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="45dp"
+        android:maxLength="60"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/tv_room_detail_id_key"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"
+        android:textColor="@color/roomkit_color_gray_level18"
+        android:text="@string/roomkit_room_info_id"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_room_detail_name" />
+
+    <TextView
+        android:id="@+id/tv_room_detail_id_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_room_detail_id_key"
+        app:layout_constraintTop_toBottomOf="@+id/tv_room_detail_name" />
+
+    <TextView
+        android:id="@+id/tv_room_detail_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"
+        android:text="@string/roomkit_room_info_copy_id"
+        android:textColor="@color/roomkit_color_main_level2"
+        android:drawablePadding="1dp"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_room_detail_id_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_room_detail_name"
+        app:drawableLeftCompat="@drawable/roomkit_rk_copy_meetingid2" />
+
+    <TextView
+        android:id="@+id/tv_room_detail_start_time_key"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:textColor="@color/roomkit_color_gray_level18"
+        android:text="@string/roomkit_room_info_start_time"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_room_detail_id_key" />
+
+    <TextView
+        android:id="@+id/tv_room_detail_start_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_room_detail_start_time_key"
+        app:layout_constraintTop_toBottomOf="@+id/tv_room_detail_id_key" />
+
+
+    <TextView
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:textColor="@color/roomkit_color_gray_level18"
+        android:text="@string/roomkit_host"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_room_detail_start_time_key" />
+
+    <TextView
+        android:id="@+id/tv_room_detail_host_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        tools:text="哈哈哈哈"
+        android:maxLines="1"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_room_detail_id_key"
+        app:layout_constraintTop_toBottomOf="@+id/tv_room_detail_start_time_key" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

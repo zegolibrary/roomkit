@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selected_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roomkit_movable_view_bg"
+    android:minWidth="220dp"
+    android:minHeight="151dp">
+    <im.zego.roomkit.videostream.videoview.ZegoVideoView
+        android:id="@+id/video_view_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

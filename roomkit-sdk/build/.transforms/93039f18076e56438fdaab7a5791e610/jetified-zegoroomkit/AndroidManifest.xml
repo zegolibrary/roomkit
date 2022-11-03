@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="im.zego.roomkit" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="29" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application>
+        <activity
+            android:name="im.zego.roomkit.activity.RoomKitRoomActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:resizeableActivity="true"
+            android:screenOrientation="user"
+            android:theme="@style/Roomkit_NoTitleFullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="im.zego.roomkit.utils.AppSettingsDialogHolderActivity"
+            android:label=""
+            android:theme="@style/Roomkit_TransparentActivityStyle" />
+        <activity
+            android:name="im.zego.roomkit.plugin.webview.WebViewActivity"
+            android:configChanges="locale|keyboardHidden|fontScale|orientation|screenSize|layoutDirection|density|uiMode"
+            android:label="WebView"
+            android:process=":webview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="im.zego.roomkit.activity.TransparentActivity"
+            android:configChanges="locale|keyboardHidden|fontScale|orientation|screenSize|layoutDirection|density|uiMode"
+            android:theme="@style/Roomkit_TransparentActivityStyle" />
+
+        <service android:name="im.zego.roomkit.shareview.screenshare.CaptureWindowService" />
+        <service
+            android:name="im.zego.roomkit.shareview.screenshare.MediaProjectionService"
+            android:enabled="true"
+            android:foregroundServiceType="mediaProjection" />
+    </application>
+
+</manifest>

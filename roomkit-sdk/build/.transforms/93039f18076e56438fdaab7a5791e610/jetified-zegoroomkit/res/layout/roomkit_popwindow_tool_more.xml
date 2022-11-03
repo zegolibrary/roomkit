@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="38dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/roomkit_white_board_tool_view_unselect_bg">
+        <TextView
+            android:layout_marginTop="4dp"
+            android:id="@+id/undo"
+            style="@style/Roomkit_tools_text_style"
+            android:drawableTop="@drawable/roomkit_revoke2"
+            android:text="@string/roomkit_revoke_2" />
+
+        <TextView
+            android:id="@+id/redo"
+            style="@style/Roomkit_tools_text_style"
+            android:drawableTop="@drawable/roomkit_redo2"
+            android:text="@string/roomkit_toolsview_redo" />
+
+        <TextView
+            android:layout_marginBottom="4dp"
+            android:id="@+id/clear"
+            style="@style/Roomkit_tools_text_style"
+            android:drawableTop="@drawable/roomkit_clear2"
+            android:text="@string/roomkit_toolsview_clear" />
+
+    </LinearLayout>
+</FrameLayout>

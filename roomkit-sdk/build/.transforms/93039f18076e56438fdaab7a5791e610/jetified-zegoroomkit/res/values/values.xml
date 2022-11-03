@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="conference_bottom_dialog_share_items">
+        <item>@string/roomkit_whiteboard</item>
+        <item>@string/roomkit_file</item>
+        <item>@string/roomkit_screen</item>
+    </string-array>
+    <array name="graffiti_color">
+        <item>@color/roomkit_graffiti_color_5</item>
+        <item>@color/roomkit_graffiti_color_6</item>
+        <item>@color/roomkit_graffiti_color_7</item>
+        <item>@color/roomkit_graffiti_color_8</item>
+        <item>@color/roomkit_graffiti_color_9</item>
+        <item>@color/roomkit_graffiti_color_10</item>
+        <item>@color/roomkit_graffiti_color_11</item>
+        <item>@color/roomkit_graffiti_color_12</item>
+        <item>@color/roomkit_graffiti_color_1</item>
+        <item>@color/roomkit_graffiti_color_2</item>
+        <item>@color/roomkit_graffiti_color_3</item>
+        <item>@color/roomkit_graffiti_color_4</item>
+    </array>
+    <dimen name="roomkit_bottom_bar_height">55dp</dimen>
+    <dimen name="roomkit_chat_arrow_margin_bottom">2dp</dimen>
+    <dimen name="roomkit_chat_arrow_margin_start">4dp</dimen>
+    <dimen name="roomkit_chat_content_tips_padding">2dp</dimen>
+    <dimen name="roomkit_chat_list_divider">3dp</dimen>
+    <dimen name="roomkit_chat_list_height">91dp</dimen>
+    <dimen name="roomkit_chat_list_height_1v1">203dp</dimen>
+    <dimen name="roomkit_check_box_dialog_content_height">25dp</dimen>
+    <dimen name="roomkit_check_box_dialog_width">270dp</dimen>
+    <dimen name="roomkit_dialog_progress_bar_margin_right">7dp</dimen>
+    <dimen name="roomkit_dialog_progress_bar_width">14dp</dimen>
+    <dimen name="roomkit_dialog_text_size">12dp</dimen>
+    <dimen name="roomkit_dimen_1">1dp</dimen>
+    <dimen name="roomkit_dp_textSize_14">7dp</dimen>
+    <dimen name="roomkit_dp_textSize_16">8dp</dimen>
+    <dimen name="roomkit_dp_textSize_18">9dp</dimen>
+    <dimen name="roomkit_dp_textSize_20">10dp</dimen>
+    <dimen name="roomkit_dp_textSize_22">11dp</dimen>
+    <dimen name="roomkit_dp_textSize_24">12dp</dimen>
+    <dimen name="roomkit_dp_textSize_26">13dp</dimen>
+    <dimen name="roomkit_dp_textSize_28">14dp</dimen>
+    <dimen name="roomkit_dp_textSize_30">15dp</dimen>
+    <dimen name="roomkit_dp_textSize_32">16dp</dimen>
+    <dimen name="roomkit_dp_textSize_34">17dp</dimen>
+    <dimen name="roomkit_dp_textSize_36">18dp</dimen>
+    <dimen name="roomkit_drawer_file_item_divider">1dp</dimen>
+    <dimen name="roomkit_drawer_file_item_width">45dp</dimen>
+    <dimen name="roomkit_edittext_layout_height">48dp</dimen>
+    <dimen name="roomkit_edittext_layout_height_twoline">71dp</dimen>
+    <dimen name="roomkit_edittext_margin_end">19dp</dimen>
+    <dimen name="roomkit_edittext_margin_start">8dp</dimen>
+    <dimen name="roomkit_horizontal_padding">16dp</dimen>
+    <dimen name="roomkit_member_view_list_icon_width">30dp</dimen>
+    <dimen name="roomkit_member_view_list_item_height">45dp</dimen>
+    <dimen name="roomkit_member_view_list_item_name_text_size">11dp</dimen>
+    <dimen name="roomkit_member_view_list_item_name_width">180dp</dimen>
+    <dimen name="roomkit_member_view_recycler_view_left_padding">15dp</dimen>
+    <dimen name="roomkit_member_view_recycler_view_right_padding">7dp</dimen>
+    <dimen name="roomkit_member_view_title_height">45dp</dimen>
+    <dimen name="roomkit_member_view_width">334dp</dimen>
+    <dimen name="roomkit_messagesend_margin_end">15dp</dimen>
+    <dimen name="roomkit_messagesend_margin_top">9dp</dimen>
+    <dimen name="roomkit_my_file_layout_width">250dp</dimen>
+    <dimen name="roomkit_page_index_layout_height">24dp</dimen>
+    <dimen name="roomkit_page_index_text_size">11dp</dimen>
+    <dimen name="roomkit_right_drawer_layout_width">334dp</dimen>
+    <dimen name="roomkit_room_textSize_14">@dimen/roomkit_dp_textSize_14</dimen>
+    <dimen name="roomkit_room_textSize_20">@dimen/roomkit_dp_textSize_20</dimen>
+    <dimen name="roomkit_room_textSize_22">@dimen/roomkit_dp_textSize_22</dimen>
+    <dimen name="roomkit_room_textSize_24">@dimen/roomkit_dp_textSize_24</dimen>
+    <dimen name="roomkit_room_textSize_26">@dimen/roomkit_dp_textSize_26</dimen>
+    <dimen name="roomkit_room_textSize_28">@dimen/roomkit_dp_textSize_28</dimen>
+    <dimen name="roomkit_room_textSize_30">@dimen/roomkit_dp_textSize_30</dimen>
+    <dimen name="roomkit_room_textSize_34">@dimen/roomkit_dp_textSize_34</dimen>
+    <dimen name="roomkit_setting_icon_margin_right">16dp</dimen>
+    <dimen name="roomkit_textSize_18">@dimen/roomkit_dp_textSize_18</dimen>
+    <dimen name="roomkit_textSize_22">@dimen/roomkit_dp_textSize_22</dimen>
+    <dimen name="roomkit_textSize_24">@dimen/roomkit_dp_textSize_24</dimen>
+    <dimen name="roomkit_textSize_28">@dimen/roomkit_dp_textSize_28</dimen>
+    <dimen name="roomkit_textSize_30">@dimen/roomkit_dp_textSize_30</dimen>
+    <dimen name="roomkit_textSize_32">@dimen/roomkit_dp_textSize_32</dimen>
+    <dimen name="roomkit_textSize_34">@dimen/roomkit_dp_textSize_34</dimen>
+    <dimen name="roomkit_textSize_36">@dimen/roomkit_dp_textSize_36</dimen>
+    <dimen name="roomkit_toast_margin_end">15dp</dimen>
+    <dimen name="roomkit_toast_margin_start">15dp</dimen>
+    <dimen name="sp_textSize_22">11sp</dimen>
+    <item name="roomkit_view_bottom_bar" type="id"/>
+    <item name="roomkit_view_course_ware_view" type="id"/>
+    <item name="roomkit_view_left_float_buttons_view" type="id"/>
+    <item name="roomkit_view_member_view" type="id"/>
+    <item name="roomkit_view_message_view" type="id"/>
+    <item name="roomkit_view_raise_hand_view" type="id"/>
+    <item name="roomkit_view_rotate_button" type="id"/>
+    <item name="roomkit_view_share_list_view" type="id"/>
+    <item name="roomkit_view_share_message_view" type="id"/>
+    <item name="roomkit_view_share_start_mask_view" type="id"/>
+    <item name="roomkit_view_share_video_zone" type="id"/>
+    <item name="roomkit_view_share_view" type="id"/>
+    <item name="roomkit_view_sheet_list_view" type="id"/>
+    <item name="roomkit_view_start_mask_view" type="id"/>
+    <item name="roomkit_view_top_bar" type="id"/>
+    <item name="roomkit_view_video_tool_view" type="id"/>
+    <item name="roomkit_view_video_zone" type="id"/>
+    <item name="roomkit_view_whiteboard_buttons_view" type="id"/>
+    <item name="roomkit_view_widget_container" type="id"/>
+    <item name="roomkit_view_work_view" type="id"/>
+    <integer name="roomkit_animation_duration_250">250</integer>
+    <style name="Roomkit_AppDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/roomkit_color_main_level1</item>
+        <item name="colorPrimaryDark">@color/roomkit_color_main_level1</item>
+        <item name="colorAccent">@color/roomkit_color_main_level2</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="Roomkit_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/roomkit_color_main_level1</item>
+        <item name="colorPrimaryDark">@color/roomkit_color_main_level1</item>
+        <item name="colorAccent">@color/roomkit_color_main_level2</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:windowBackground">@color/roomkit_color_gray_level26</item>
+    </style>
+    <style name="Roomkit_BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/roomkit_bottom_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/roomkit_bottom_dialog_out</item>
+    </style>
+    <style name="Roomkit_BottomDialogFragmentStyle" parent="Roomkit_DialogFragmentStyle">
+        <item name="android:windowAnimationStyle">@style/Roomkit_BottomDialogAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+    </style>
+    <style name="Roomkit_BottomDialogStyle" parent="android:style/Theme.Dialog">
+
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--模糊-->
+    </style>
+    <style name="Roomkit_DialogFragmentStyle" parent="Roomkit_AppDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="Roomkit_MiguDialogStyle" parent="Roomkit_AppDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="Roomkit_NameMicText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/roomkit_color_gray_level26</item>
+    </style>
+    <style name="Roomkit_NoTitleFullscreen" parent="Roomkit_AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="alertDialogTheme">@style/Roomkit_MiguDialogStyle</item>
+    </style>
+    <style name="Roomkit_TransparentActivityStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="Roomkit_conference_bottom_dialog_middle_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">13dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:gravity">top|center_horizontal</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColor">@color/roomkit_color_gray_level4</item>
+        <item name="android:textSize">11dp</item>
+    </style>
+    <style name="Roomkit_search_attendee_no_result_tip">
+        <item name="android:textColor">#565e66</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Roomkit_tool_bar_center_child_style">
+        <item name="android:layout_width">42dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:drawablePadding">1.5dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">9dp</item>
+        <item name="android:textColor">@color/roomkit_color_gray_level26</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Roomkit_tools_text_style">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/roomkit_wbtools_item_textcolor</item>
+        <item name="android:textSize">@dimen/roomkit_textSize_18</item>
+        <item name="android:drawablePadding">-2dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr format="reference" name="metaButtonBarStyle"/>
+        <attr format="reference" name="metaButtonBarButtonStyle"/>
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr format="dimension" name="civ_border_width"/>
+        <attr format="color" name="civ_border_color"/>
+        <attr format="boolean" name="civ_border_overlay"/>
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr format="color" name="civ_fill_color"/>
+        <attr format="color" name="civ_circle_background_color"/>
+    </declare-styleable>
+    <declare-styleable name="ContentItem">
+        <attr format="string|reference" name="text"/>
+        <attr format="string|reference" name="textHint"/>
+        <attr format="boolean" name="textVisible"/>
+        <attr format="integer" name="textMaxLength"/>
+        <attr name="textType">
+            <enum name="clear" value="0"/>
+            <enum name="phone" value="1"/>
+            <enum name="password" value="2"/>
+            <enum name="email" value="3"/>
+            <enum name="account" value="4"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="IOSSwitch">
+        <attr format="boolean" name="hasShadow"/>
+        <attr format="color" name="primaryColor"/>
+        <attr format="color" name="primaryColorDark"/>
+        <attr format="color" name="offColor"/>
+        <attr format="color" name="offColorDark"/>
+        <attr format="color" name="shadowColor"/>
+        <attr format="float" name="ratioAspect"/>
+        <attr format="boolean" name="isChecked"/>
+    </declare-styleable>
+    <declare-styleable name="MaxHeightRecyclerView">
+        <attr format="dimension" name="maxHeight"/>
+    </declare-styleable>
+    <declare-styleable name="RoundTextIconView">
+        <attr format="dimension" name="circleRadius"/> <!--半径 dp-->
+        <attr format="dimension" name="textSize"/> <!--中间的文字大小 sp-->
+    </declare-styleable>
+    <declare-styleable name="SettingItem">
+        <attr format="string" name="setting_item_title"/>
+        <attr format="dimension" name="setting_item_title_text_size"/>
+        <attr format="color" name="setting_item_title_text_color"/>
+        <attr format="reference" name="setting_item_title_drawable"/>
+        <attr format="string" name="setting_item_content"/>
+        <attr format="dimension" name="setting_item_content_text_size"/>
+        <attr format="dimension" name="setting_item_content_drawable_padding"/>
+        <attr format="string" name="setting_item_desc"/>
+        <attr format="boolean" name="setting_item_switch_checked"/>
+        <attr format="boolean" name="setting_item_underline"/>
+    </declare-styleable>
+    <declare-styleable name="WaveImageView">
+        <attr format="reference" name="wave_empty_image"/>
+        <attr format="reference" name="wave_full_image"/>
+        <attr format="reference" name="wave_disable"/>
+        <attr format="dimension" name="wave_top"/>
+        <attr format="dimension" name="wave_bottom"/>
+    </declare-styleable>
+    <declare-styleable name="ZegoAppBarLayout">
+        <attr format="string" name="title"/>
+        <attr format="string" name="rightText"/>
+    </declare-styleable>
+    <declare-styleable name="ZegoContentView">
+        <attr format="string|reference" name="subTitleText"/>
+        <attr format="string|reference" name="describeText"/>
+        <attr format="string|reference" name="text1"/>
+        <attr format="string|reference" name="text1hint"/>
+        <attr format="boolean" name="text1Visible"/>
+        <attr format="integer" name="text1MaxLength"/>
+        <attr name="text1Type">
+            <enum name="clear" value="0"/>
+            <enum name="phone" value="1"/>
+            <enum name="password" value="2"/>
+            <enum name="email" value="3"/>
+            <enum name="account" value="4"/>
+        </attr>
+        <attr format="string|reference" name="text2"/>
+        <attr format="string|reference" name="text2hint"/>
+        <attr format="boolean" name="text2Visible"/>
+        <attr format="integer" name="text2MaxLength"/>
+        <attr name="text2Type">
+            <enum name="clear" value="0"/>
+            <enum name="phone" value="1"/>
+            <enum name="password" value="2"/>
+            <enum name="email" value="3"/>
+            <enum name="account" value="4"/>
+        </attr>
+        <attr format="string|reference" name="text3"/>
+        <attr format="string|reference" name="text3hint"/>
+        <attr format="boolean" name="text3Visible"/>
+        <attr format="integer" name="text3MaxLength"/>
+        <attr name="text3Type">
+            <enum name="clear" value="0"/>
+            <enum name="phone" value="1"/>
+            <enum name="password" value="2"/>
+            <enum name="email" value="3"/>
+            <enum name="account" value="4"/>
+        </attr>
+        <attr format="string|reference" name="submitText"/>
+        <attr format="boolean" name="checkEmpty"/>
+        <attr format="boolean" name="describeParentVisible"/>
+        <attr format="reference" name="customView"/>
+        <attr name="service">
+            <enum name="hide" value="0"/>
+            <enum name="check" value="1"/>
+            <enum name="bind_nocheck" value="2"/>
+            <enum name="register_nocheck" value="3"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ZegoTabLayout">
+        <attr format="color|reference" name="indicatorStartColor"/>
+        <attr format="color|reference" name="indicatorEndColor"/>
+        <attr format="dimension|reference" name="indicatorMarginStart"/>
+        <attr format="dimension|reference" name="indicatorMarginEnd"/>
+        <attr format="dimension|reference" name="indicatorMarginBottom"/>
+        <attr format="dimension|reference" name="tabSelectedTextSize"/>
+        <attr format="dimension|reference" name="tabTextSize"/>
+    </declare-styleable>
+    <declare-styleable name="ZoomRecyclerView">
+        <attr format="float" name="min_scale"/>
+        <attr format="float" name="max_scale"/>
+        <attr format="float" name="default_scale"/>
+        <attr format="integer" name="zoom_duration"/>
+    </declare-styleable>
+</resources>

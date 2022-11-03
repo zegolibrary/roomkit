@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/member_list_containner"
+    android:paddingLeft="@dimen/roomkit_member_view_recycler_view_left_padding"
+    android:paddingRight="@dimen/roomkit_member_view_recycler_view_right_padding">
+
+    <View
+        android:layout_width="275dp"
+        android:layout_height="1px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:maxWidth="@dimen/roomkit_member_view_list_item_name_width"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="@dimen/roomkit_member_view_list_item_name_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/status_camera"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/roomkit_member_list_camera_status_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        />
+
+    <ImageView
+        android:id="@+id/status_mic"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="1dp"
+        android:src="@drawable/roomkit_member_list_mic_status_icon"
+        app:layout_constraintLeft_toRightOf="@+id/status_camera"
+        app:layout_constraintTop_toTopOf="@+id/status_camera"/>
+
+    <ImageView
+        android:id="@+id/status_share"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="1dp"
+        android:src="@drawable/roomkit_member_list_authority_status_icon"
+        app:layout_constraintLeft_toRightOf="@+id/status_mic"
+        app:layout_constraintTop_toTopOf="@+id/status_camera"/>
+    <ImageView
+        android:id="@+id/status_chat"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/roomkit_member_chat_allow_close"
+        app:layout_constraintLeft_toRightOf="@+id/status_share"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+    <ImageView
+        android:id="@+id/iv_raise_hand_status"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"
+        android:src="@drawable/roomkit_member_hands_label2"
+        app:layout_constraintLeft_toRightOf="@+id/status_chat"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        />
+    <ImageView
+        android:id="@+id/status_onstage"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/roomkit_state_onstage2"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@+id/iv_raise_hand_status"
+        app:layout_constraintTop_toBottomOf="@+id/name"/>
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="status_share, status_mic, status_camera" />
+
+    <ImageView
+        android:id="@+id/more_action"
+        android:layout_width="@dimen/roomkit_member_view_list_icon_width"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@drawable/roomkit_member_list_more2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/authorize"
+        android:layout_width="@dimen/roomkit_member_view_list_icon_width"
+        android:layout_height="@dimen/roomkit_member_view_list_item_height"
+        android:scaleType="centerInside"
+        android:src="@drawable/roomkit_member_list_authority_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/more_action"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mic"
+        android:layout_width="@dimen/roomkit_member_view_list_icon_width"
+        android:layout_height="@dimen/roomkit_member_view_list_item_height"
+        android:scaleType="centerInside"
+        android:src="@drawable/roomkit_member_list_mic_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/authorize"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="@dimen/roomkit_member_view_list_icon_width"
+        android:layout_height="@dimen/roomkit_member_view_list_item_height"
+        android:scaleType="centerInside"
+        android:src="@drawable/roomkit_member_list_camera_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/mic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_action_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="camera, mic, authorize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

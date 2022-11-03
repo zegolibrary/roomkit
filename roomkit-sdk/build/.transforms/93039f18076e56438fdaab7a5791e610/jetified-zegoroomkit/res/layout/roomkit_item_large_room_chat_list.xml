@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_im_item_container"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="2dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_avatar_container"
+            android:layout_width="25dp"
+            android:layout_height="27dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginTop="14dp"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tag_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="6.5dp"
+            android:background="@drawable/roomkit_im_host_tag_bg"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="@string/roomkit_host"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/tv_chat_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4.5dp"
+            app:layout_goneMarginLeft="0dp"
+            android:maxWidth="80dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/roomkit_color_main_level2"
+            android:textSize="11dp"
+            app:layout_constraintLeft_toRightOf="@+id/rl_avatar_container"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_msg_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:autoLink="web"
+            android:includeFontPadding="false"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chat_name" />
+
+        <ImageView
+            android:id="@+id/iv_translate"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/roomkit_translate_btn"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/tv_msg_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chat_name" />
+
+        <View
+            android:id="@+id/translate_divider"
+            android:layout_width="0dp"
+            android:layout_height="2px"
+            android:layout_marginTop="6dp"
+            android:background="@color/roomkit_color_gray_level7"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_msg_content" />
+
+        <ProgressBar
+            android:id="@+id/translate_progress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/roomkit_translate_msg_progress_bar"
+            android:indeterminateDuration="1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/translate_divider" />
+
+        <TextView
+            android:id="@+id/tv_translated_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:includeFontPadding="false"
+            android:maxWidth="113dp"
+            android:textColor="@color/roomkit_graffiti_color_2"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/translate_divider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_send_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingStart="@dimen/roomkit_chat_content_tips_padding">
+
+        <ImageView
+            android:id="@+id/send_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/roomkit_send_failed" />
+
+        <ProgressBar
+            android:id="@+id/sending_progress"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/roomkit_send_msg_progress_bar" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:text="@string/roomkit_conference_search_noresult"
+    android:textColor="@color/roomkit_color_gray_level14"
+    android:layout_width="match_parent"
+    android:textSize="@dimen/roomkit_textSize_22"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    app:drawableTopCompat="@drawable/roomkit_member_search_default2" />

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <im.zego.roomkit.shareview.screenshare.ScreenShareLocalView
+        android:id="@+id/screen_share_local"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/roomkit_color_extend_level1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+            <TextView
+                android:id="@+id/screen_share_local_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/roomkit_share_screen_by_myself"
+                android:textColor="@color/roomkit_color_gray_level18"
+                android:textSize="@dimen/roomkit_textSize_28" />
+
+            <Button
+                android:id="@+id/screen_share_local_close"
+                android:layout_width="104dp"
+                android:layout_height="28dp"
+                android:layout_below="@id/screen_share_local_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/roomkit_drawable_round_stroke_red"
+                android:text="@string/roomkit_share_screen_ended_button_text"
+                android:textColor="@color/roomkit_color_extend_level12"
+                android:textSize="@dimen/roomkit_textSize_24" />
+        </RelativeLayout>
+    </im.zego.roomkit.shareview.screenshare.ScreenShareLocalView>
+
+    <im.zego.roomkit.videostream.videoview.ZegoScreenShareVideoView
+        android:id="@+id/screen_share_remote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:visibility="gone" />
+
+</merge>

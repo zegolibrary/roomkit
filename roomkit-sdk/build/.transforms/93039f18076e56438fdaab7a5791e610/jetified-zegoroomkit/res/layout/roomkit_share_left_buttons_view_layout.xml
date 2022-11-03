@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <!-- 下面 layout_marginEnd 的意义在于让 孙子sharing_content_count_tv 能够超出边界展示 -->
+    <!-- 即把爷爷变宽->父亲变宽->孙子超出边界，margin取值未考究，目测够了-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/auto_hide_left_bar"
+        android:layout_width="38dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roomkit_drawable_bg_left_toolbar"
+        android:clipChildren="false"
+        android:elevation="8dp"
+        android:maxWidth="38dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 展示/隐藏画廊视频坐席区按钮 -->
+        <ImageButton
+            android:id="@+id/video_bench_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/roomkit_drawable_bg_left_button"
+            android:src="@drawable/roomkit_drawable_sidetool_video"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sharing_content_btn"/>
+
+        <!-- 画廊视频的坐席数量 -->
+        <TextView
+            android:id="@+id/video_bench_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roomkit_drawable_round_count"
+            android:gravity="center"
+            android:minWidth="14dp"
+            android:minHeight="14dp"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="@dimen/roomkit_room_textSize_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/video_bench_btn"
+            app:layout_constraintStart_toStartOf="@id/video_bench_btn"
+            tools:text="99" />
+
+        <!-- 展示/隐藏右边四个画廊视频的坐席按钮，目前仅有直播场景支持右侧坐席区展示和隐藏 -->
+        <ImageButton
+            android:id="@+id/video_seat_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:visibility="gone"
+            android:background="@drawable/roomkit_drawable_bg_left_button"
+            android:src="@drawable/roomkit_drawable_sidetool_seat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/video_bench_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="video_bench_btn, video_bench_count_tv" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/video_btn_bottom_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="video_bench_btn, video_seat_btn" />
+
+        <!-- 展示正在共享内容的按钮 -->
+        <ImageButton
+            android:id="@+id/sharing_content_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/roomkit_drawable_bg_left_button"
+            android:src="@drawable/roomkit_sidetool_sharingfile2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/video_btn_bottom_barrier" />
+
+        <!-- 正在共享内容的数量 -->
+        <TextView
+            android:id="@+id/sharing_content_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="21dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roomkit_drawable_round_count"
+            android:gravity="center"
+            android:minWidth="14dp"
+            android:minHeight="14dp"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="@dimen/roomkit_room_textSize_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/sharing_content_btn"
+            app:layout_constraintStart_toStartOf="@id/sharing_content_btn"
+            tools:text="99" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/sharing_content_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="sharing_content_btn, sharing_content_count_tv" />
+
+        <ImageButton
+            android:id="@+id/close_screen_share_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/roomkit_drawable_bg_left_button"
+            android:src="@drawable/roomkit_sidetool_exitsharing2"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sharing_content_btn" />
+
+        <im.zego.roomkit.toolbar.WbMarkToolBtn
+            android:id="@+id/mark_tools_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/roomkit_drawable_bg_left_button"
+            android:src="@drawable/roomkit_drawable_sidetool_mark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/close_screen_share_btn" />
+
+        <View
+            android:id="@+id/share_view_line"
+            android:layout_width="0.5dp"
+            android:layout_height="0.5dp"
+            android:layout_margin="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mark_tools_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

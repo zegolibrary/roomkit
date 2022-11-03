@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:roomkit-sdk:unspecified">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/roomkit-sdk/build/.transforms/93039f18076e56438fdaab7a5791e610/jetified-zegoroomkit/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/roomkit-sdk/build/.transforms/93039f18076e56438fdaab7a5791e610/jetified-zegoroomkit/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/roomkit-sdk/build/.transforms/93039f18076e56438fdaab7a5791e610/jetified-zegoroomkit/res" />
+      <root url="file://$PROJECT_DIR$/roomkit-sdk/build/.transforms/93039f18076e56438fdaab7a5791e610/jetified-zegoroomkit/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

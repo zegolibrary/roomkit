@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar_center_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/chat"
+        style="@style/Roomkit_tool_bar_center_child_style"
+        android:drawableTop="@drawable/roomkit_discussion"
+        android:text="@string/roomkit_toolbar_discussion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/member_list_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/member_list_layout"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/share"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chat"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/member_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/roomkit_member"
+            android:drawablePadding="2dp"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:paddingTop="4dp"
+            android:text="@string/roomkit_toolbar_member"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="9dp" />
+
+        <View
+            android:id="@+id/roomkit_member_hand"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_gravity="right|top"
+            android:background="@drawable/roomkit_bottom_red_point_bg"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_margin="4dp"
+            />
+
+        <TextView
+            android:id="@+id/member_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="15.5dp"
+            android:background="@drawable/roomkit_member_count_text_bg"
+            android:gravity="center"
+            android:minWidth="15dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="1"
+            android:textColor="@color/roomkit_color_gray_level3"
+            android:textSize="7dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/share"
+        style="@style/Roomkit_tool_bar_center_child_style"
+        android:drawableTop="@drawable/roomkit_share"
+        android:text="@string/roomkit_share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/member_list_layout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0.5dp"
+        android:layout_height="28dp"
+        android:layout_margin="4dp"
+        android:background="@color/roomkit_color_gray_level16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/onstage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/share"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/onstage"
+        style="@style/Roomkit_tool_bar_center_child_style"
+        android:drawableTop="@drawable/roomkit_toolbar_onstage_icon2"
+        android:text="@string/roomkit_invite_to_stage_leave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0.5dp"
+        android:layout_height="28dp"
+        android:layout_margin="4dp"
+        android:background="@color/roomkit_color_gray_level16"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/camera"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/onstage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/camera"
+        style="@style/Roomkit_tool_bar_center_child_style"
+        android:drawableTop="@drawable/roomkit_close_camera"
+        android:text="@string/roomkit_camera"
+        android:textColor="@color/roomkit_toolbar_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mic"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mic"
+        style="@style/Roomkit_tool_bar_center_child_style"
+        android:drawableTop="@drawable/roomkit_close_microphone"
+        android:text="@string/roomkit_microphone"
+        android:textColor="@color/roomkit_toolbar_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/camera"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

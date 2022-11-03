@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/im_view_container"
+    android:layout_marginBottom="7dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/roomkit_chat_arrow_margin_start"
+        android:layout_marginBottom="@dimen/roomkit_chat_arrow_margin_bottom"
+        android:id="@+id/fl_packup_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chat_recycleview">
+
+
+        <TextView
+            android:id="@+id/chat_window_packup_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:background="@drawable/roomkit_chat_item_discuss_bg"
+            android:drawableRight="@drawable/roomkit_chat_icon_packup_normal"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/roomkit_toolbar_discussion"
+            android:textColor="@color/roomkit_color_gray_level26"
+            android:textSize="@dimen/roomkit_room_textSize_20" />
+
+        <ImageView
+            android:id="@+id/red_dot"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_gravity="right|top"
+            android:src="@drawable/roomkit_red_dot"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <im.zego.roomkit.im.MaxHeightRecyclerView
+        android:id="@+id/chat_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_fix_in_out_room_message"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:layout_marginStart="6dp"
+        android:maxWidth="255dp"
+        android:visibility="gone"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@drawable/roomkit_chat_item_text_bg"
+        android:textColor="@color/roomkit_color_im_level2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/chat_new_message_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:paddingStart="9dp"
+        android:paddingEnd="9dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="@dimen/sp_textSize_22"
+        android:gravity="center_vertical"
+        android:textColor="@color/roomkit_color_main_level1"
+        android:background="@drawable/roomkit_live_chat_new_message_bubble_bg"
+        android:visibility="gone"
+        tools:text="1条新消息"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/roomkit_edittext_layout_height"
+    android:background="@color/roomkit_color_gray_level26"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/message_send_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/roomkit_messagesend_margin_end"
+        android:text="@string/roomkit_finish"
+        android:textColor="@color/roomkit_color_extend_level3"
+        android:textSize="@dimen/roomkit_room_textSize_30" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/roomkit_messagesend_margin_top"
+        android:layout_marginEnd="@dimen/roomkit_edittext_margin_end"
+        android:layout_marginStart="@dimen/roomkit_edittext_margin_start"
+        android:layout_marginTop="@dimen/roomkit_messagesend_margin_top"
+        android:layout_toStartOf="@+id/message_send_textview"
+        android:background="@drawable/roomkit_inputbox_oneline"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/softinput_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:imeOptions="flagNoExtractUi|flagNoFullscreen"
+            android:maxLength="50"
+            android:maxLines="2"
+            android:textColor="@color/roomkit_color_gray_level7"
+            android:textCursorDrawable="@drawable/roomkit_cursor"
+            android:textSize="@dimen/roomkit_room_textSize_30" />
+    </LinearLayout>
+
+</RelativeLayout>

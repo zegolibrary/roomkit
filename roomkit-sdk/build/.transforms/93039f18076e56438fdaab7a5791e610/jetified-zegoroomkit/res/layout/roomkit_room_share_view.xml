@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--  用来展示课件和白板内容,不管在什么分辨率的设备中，都是自己计算出16：9的大小，单独处理-->
+    <im.zego.roomkit.shareview.whiteboard.WhiteboardShareController
+        android:id="@+id/whiteboard_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--        白板控件(右边的工具条)-->
+<!--    <im.zego.roomkit.shareview.whiteboard.WhiteboardToolsView-->
+<!--        android:id="@+id/sidetool_wb_bar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--音视频分享 这部分有可能会被限制在2：1区域大小-->
+    <FrameLayout
+        android:id="@+id/media_share_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--屏幕分享 这部分有可能会被限制在2：1区域大小-->
+    <FrameLayout
+        android:id="@+id/screen_share_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/virtual_camera_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/wait_share_virtual_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/roomkit_share_virtual_camera_waiting_placeholder"
+            android:textColor="@color/roomkit_color_gray_level18"
+            android:textSize="@dimen/roomkit_textSize_28" />
+        <im.zego.roomkit.videostream.videoview.ZegoVideoView
+            android:id="@+id/virtual_camera_videoview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/share_watermark"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    &lt;!&ndash;    共享模式下屏幕左上角的3个按钮 ,包裹一层是为了动画效果&ndash;&gt;-->
+<!--    <im.zego.roomkit.wrapper.share.view.ShareLeftButtonsView-->
+<!--        android:id="@+id/auto_hide_left_bar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clipChildren="false"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+</merge>

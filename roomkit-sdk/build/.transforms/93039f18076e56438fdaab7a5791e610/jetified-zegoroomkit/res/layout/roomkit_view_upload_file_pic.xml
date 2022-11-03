@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="115dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roomkit_upload_file_bg"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/upload_file"
+        android:layout_width="115dp"
+        android:layout_height="37dp"
+        android:drawableLeft="@drawable/roomkit_upload_files2"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="@string/roomkit_upload_file"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="@dimen/roomkit_room_textSize_22" />
+
+    <TextView
+        android:id="@+id/upload_picture"
+        android:layout_width="113dp"
+        android:layout_height="37dp"
+        android:drawableLeft="@drawable/roomkit_upload_pictures2"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="@string/roomkit_upload_picture"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="@dimen/roomkit_room_textSize_22" />
+
+    <View
+        android:layout_width="100dp"
+        android:layout_marginTop="3dp"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/roomkit_color_gray_level10"/>
+
+    <TextView
+        android:id="@+id/upload_file_types"
+        android:layout_width="113dp"
+        android:layout_height="37dp"
+        android:drawableLeft="@drawable/roomkit_file_type_tips2"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="@string/roomkit_file_support_types"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="@dimen/roomkit_room_textSize_22" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="false" android:drawable="@drawable/roomkit_room_top_toast_tips_bg"/>
+    <item android:state_selected="true" android:drawable="@drawable/roomkit_room_top_toast_warning_bg"/>
+</selector>

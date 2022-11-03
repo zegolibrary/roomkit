@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingLeft="16dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/roomkit_horizontal_back"
+        android:id="@+id/iv_back_portrait"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_marginLeft="15dp"
+        />
+    <TextView
+        android:id="@+id/room_title_topic_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxWidth="185dp"
+         android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_back_portrait"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/roomkit_color_gray_level26"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/room_title_number_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/room_title_topic_v2"
+        android:textColor="@color/roomkit_graffiti_color_2"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/iv_back_portrait"
+        android:layout_marginLeft="10dp"
+        android:textSize="10sp" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="1dp"
+        android:layout_height="8dp"
+        android:layout_below="@+id/room_title_topic_v2"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/room_title_number_v2"
+        android:background="@color/roomkit_graffiti_color_2" />
+
+    <TextView
+        android:id="@+id/tv_room_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/room_title_topic_v2"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/view_line"
+        android:textColor="@color/roomkit_graffiti_color_2"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_port_close"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="17dp"
+        android:visibility="gone"
+        android:src="@drawable/vertical_screen_close"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>
